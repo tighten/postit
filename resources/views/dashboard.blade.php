@@ -14,7 +14,7 @@
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
 <body class="bg-brand-lightest font-sans font-normal">
-    <div class="flex flex-col">
+    <div class="flex flex-col" id="app">
         <div class="min-h-screen flex items-center justify-center">
             <div class="flex flex-col justify-around h-full">
                 <div>
@@ -23,31 +23,12 @@
                     </h1>
                     <p class="mb-8">Remembering to submit our posts to all the spots</p>
 
-                    <table>
-                        @foreach ($sources as $source)
-                            <tr>
-                                <td><h2>{{ $source->name }}</h2></td>
-                                @foreach ($targets as $target)
-                                <th><a href="{{ $target['url'] }}" target="_blank">{{ $target['name'] }}</a></th>
-                                @endforeach
-                            </tr>
-                            @foreach ($source->posts as $post)
-                            <tr>
-                                <td class="text-right pr-8">
-                                    <a href="https://laravel.com/docs" class="no-underline hover:underline text-sm font-normal text-brand-dark">{{ $post->title }}</a>
-                                </td>
-                                @foreach ($targets as $target)
-                                <td>
-                                    <input type="checkbox">
-                                </td>
-                                @endforeach
-                            </tr>
-                            @endforeach
-                        @endforeach
-                    </table>
+                    <Posts :targets="{{ json_encode($targets) }}" :sources="{{ json_encode($sources) }}"/>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="/js/app.js"></script>
 </body>
 </html>

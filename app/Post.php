@@ -13,4 +13,9 @@ class Post extends Model
     {
         return $this->belongsTo(Post::class);
     }
+
+    public function submissions()
+    {
+        return $this->hasMany(Submission::class);
+    }
 }
