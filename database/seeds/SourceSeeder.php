@@ -10,6 +10,10 @@ class SourceSeeder extends Seeder
             'name' => 'Tighten Blog',
             'feed_url' => 'https://tighten.co/blog/feed.atom'
         ],
+        [
+            'name' => 'MattStauffer.com',
+            'feed_url' => 'https://mattstauffer.com/blog/feed.atom'
+        ]
     ];
 
     public function run()

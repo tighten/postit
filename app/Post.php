@@ -2,9 +2,15 @@
 
 namespace App;
 
+use App\Post;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
     protected $guarded = [];
+
+    public function source()
+    {
+        return $this->belongsTo(Post::class);
+    }
 }
