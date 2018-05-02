@@ -30463,6 +30463,8 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 //
 //
 //
@@ -30474,20 +30476,48 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['post', 'targets'],
 
+    data: function data() {
+        return {
+            submissions: []
+        };
+    },
     mounted: function mounted() {
-        console.log(this.post);
+        // console.log(this.post.submissions);
+        this.submissions = _.map(this.post.submissions, function (submission) {
+            return submission.target_id;
+        });
     },
 
 
     methods: {
+        // @todo can this be a computed prop instead?
         submittedToTarget: function submittedToTarget(target) {
-            return _.filter(this.post.submissions, function (submission) {
-                return submission.target_id == target.id;
+            // @todo there's gotta be a cleaner way
+            return _.filter(this.submissions, function (submission_target_id) {
+                return submission_target_id == target.id;
             }).length > 0;
+        },
+        toggleSubmission: function toggleSubmission(target, is_submitted) {
+            var data = {
+                'target_id': target.id,
+                'post_id': this.post.id
+            };
+
+            // @todo cleaner way to make this not a conditional?
+            // @todo There seems to be the need for a Vue-reactive way to modify this array?
+            if (is_submitted) {
+                _.remove(this.submissions, target.id);
+                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete('/api/submissions', { params: data });
+            } else {
+                this.submissions.push(target.id);
+                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/api/submissions', data);
+            }
         }
     }
 });
@@ -30519,7 +30549,12 @@ var render = function() {
         return _c("td", [
           _c("input", {
             attrs: { type: "checkbox" },
-            domProps: { checked: _vm.submittedToTarget(target) }
+            domProps: { checked: _vm.submittedToTarget(target) },
+            on: {
+              click: function($event) {
+                _vm.toggleSubmission(target, _vm.submittedToTarget(target))
+              }
+            }
           })
         ])
       })
