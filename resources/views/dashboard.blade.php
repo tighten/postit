@@ -18,10 +18,9 @@
         <div class="flex items-center justify-center mt-8">
             <div class="flex flex-col justify-around h-full">
                 <div>
-                    <h1 class="text-center tracking-wide text-7xl mb-6">
+                    <h1 class="tracking-wide text-7xl mb-6">
                         {{ config('app.name', 'PostIt') }}
                     </h1>
-                    <p class="mb-8">Remembering to submit our posts to all the spots</p>
 
                     <Posts :targets="{{ json_encode($targets) }}" :sources="{{ json_encode($sources) }}"/>
                 </div>

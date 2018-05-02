@@ -2,9 +2,9 @@
     <table>
         <tbody v-for="source in sources" source="source" targets="targets">
             <tr>
-                <td><h2>{{ source.name }}</h2></td>
+                <td class="text-right font-bold pr-4 pt-4">{{ source.name }}</td>
                 <td></td>
-                <th v-for="target in targets" class="pr-4">
+                <th v-for="target in targets" class="pr-4 text-sm">
                     <a :href="target.url" target="_blank">{{ target.name }}</a>
                 </th>
             </tr>
@@ -28,7 +28,7 @@
                 //     return post.published_at < two weeks ago;
                 // });
 
-                return _.slice(source.posts, 0, 10);
+                return _.slice(source.posts, 0, 5);
             }
         },
 

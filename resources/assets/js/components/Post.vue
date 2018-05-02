@@ -1,11 +1,22 @@
 <template>
     <tr>
         <td class="text-right pr-4">
-            <a :href="this.post.guid" class="no-underline hover:underline text-sm font-normal text-grey-darkest">{{ this.post.title }}</a>
+            <a :href="this.post.guid"
+                class="no-underline hover:underline font-normal text-grey-darkest"
+                >
+                {{ this.post.title }}
+            </a>
         </td>
-        <td class="text-xs text-grey-darker uppercase pr-4">{{ this.post.published_at }}</td>
+        <td class="text-xs text-grey-darker uppercase pr-4">
+            {{ this.post.published_at }}
+        </td>
         <td v-for="target in this.targets">
-            <input type="checkbox" :checked="submittedToTarget(target)" @click="toggleSubmission(target, submittedToTarget(target))">
+            <input type="checkbox"
+                :checked="submittedToTarget(target)"
+                @click="toggleSubmission(target, submittedToTarget(target))"
+                class="my-2"
+                style="transform: scale(1.25)"
+                />
         </td>
     </tr>
 </template>

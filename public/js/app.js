@@ -30493,7 +30493,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             //     return post.published_at < two weeks ago;
             // });
 
-            return _.slice(source.posts, 0, 10);
+            return _.slice(source.posts, 0, 5);
         }
     },
 
@@ -30518,12 +30518,14 @@ var render = function() {
           _c(
             "tr",
             [
-              _c("td", [_c("h2", [_vm._v(_vm._s(source.name))])]),
+              _c("td", { staticClass: "text-right font-bold pr-4 pt-4" }, [
+                _vm._v(_vm._s(source.name))
+              ]),
               _vm._v(" "),
               _c("td"),
               _vm._v(" "),
               _vm._l(_vm.targets, function(target) {
-                return _c("th", { staticClass: "pr-4" }, [
+                return _c("th", { staticClass: "pr-4 text-sm" }, [
                   _c("a", { attrs: { href: target.url, target: "_blank" } }, [
                     _vm._v(_vm._s(target.name))
                   ])
@@ -30632,6 +30634,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -30693,20 +30706,22 @@ var render = function() {
           "a",
           {
             staticClass:
-              "no-underline hover:underline text-sm font-normal text-grey-darkest",
+              "no-underline hover:underline font-normal text-grey-darkest",
             attrs: { href: this.post.guid }
           },
-          [_vm._v(_vm._s(this.post.title))]
+          [_vm._v("\n            " + _vm._s(this.post.title) + "\n        ")]
         )
       ]),
       _vm._v(" "),
       _c("td", { staticClass: "text-xs text-grey-darker uppercase pr-4" }, [
-        _vm._v(_vm._s(this.post.published_at))
+        _vm._v("\n        " + _vm._s(this.post.published_at) + "\n    ")
       ]),
       _vm._v(" "),
       _vm._l(this.targets, function(target) {
         return _c("td", [
           _c("input", {
+            staticClass: "my-2",
+            staticStyle: { transform: "scale(1.25)" },
             attrs: { type: "checkbox" },
             domProps: { checked: _vm.submittedToTarget(target) },
             on: {
