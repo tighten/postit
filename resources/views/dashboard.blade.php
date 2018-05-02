@@ -15,7 +15,7 @@
 </head>
 <body class="bg-brand-lightest font-sans font-normal">
     <div class="flex flex-col" id="app">
-        <div class="min-h-screen flex items-center justify-center">
+        <div class="flex items-center justify-center mt-8">
             <div class="flex flex-col justify-around h-full">
                 <div>
                     <h1 class="text-center tracking-wide text-7xl mb-6">

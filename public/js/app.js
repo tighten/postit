@@ -1100,7 +1100,7 @@ window.Vue = __webpack_require__(34);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('Row', __webpack_require__(37));
+Vue.component('Post', __webpack_require__(48));
 Vue.component('Posts', __webpack_require__(40));
 
 var app = new Vue({
@@ -30411,168 +30411,9 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(4)))
 
 /***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(9)
-/* script */
-var __vue_script__ = __webpack_require__(38)
-/* template */
-var __vue_template__ = __webpack_require__(39)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Row.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-41564173", Component.options)
-  } else {
-    hotAPI.reload("data-v-41564173", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 38 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['post', 'targets'],
-
-    data: function data() {
-        return {
-            submissions: []
-        };
-    },
-    mounted: function mounted() {
-        // console.log(this.post.submissions);
-        this.submissions = _.map(this.post.submissions, function (submission) {
-            return submission.target_id;
-        });
-    },
-
-
-    methods: {
-        // @todo can this be a computed prop instead?
-        submittedToTarget: function submittedToTarget(target) {
-            // @todo there's gotta be a cleaner way
-            return _.filter(this.submissions, function (submission_target_id) {
-                return submission_target_id == target.id;
-            }).length > 0;
-        },
-        toggleSubmission: function toggleSubmission(target, is_submitted) {
-            var data = {
-                'target_id': target.id,
-                'post_id': this.post.id
-            };
-
-            // @todo cleaner way to make this not a conditional?
-            // @todo There seems to be the need for a Vue-reactive way to modify this array?
-            if (is_submitted) {
-                _.remove(this.submissions, target.id);
-                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete('/api/submissions', { params: data });
-            } else {
-                this.submissions.push(target.id);
-                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/api/submissions', data);
-            }
-        }
-    }
-});
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "tr",
-    [
-      _c("td", { staticClass: "text-right pr-8" }, [
-        _c(
-          "a",
-          {
-            staticClass:
-              "no-underline hover:underline text-sm font-normal text-grey-darkest",
-            attrs: { href: this.post.url }
-          },
-          [_vm._v(_vm._s(this.post.title))]
-        )
-      ]),
-      _vm._v(" "),
-      _vm._l(this.targets, function(target) {
-        return _c("td", [
-          _c("input", {
-            attrs: { type: "checkbox" },
-            domProps: { checked: _vm.submittedToTarget(target) },
-            on: {
-              click: function($event) {
-                _vm.toggleSubmission(target, _vm.submittedToTarget(target))
-              }
-            }
-          })
-        ])
-      })
-    ],
-    2
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-41564173", module.exports)
-  }
-}
-
-/***/ }),
+/* 37 */,
+/* 38 */,
+/* 39 */,
 /* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30639,6 +30480,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['sources', 'targets'],
@@ -30646,6 +30488,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         limitPosts: function limitPosts(source) {
             // @todo: It'd be nice if this instead just showed those published in the last two weeks
+
+            // return _.filter(source.posts, (post) => {
+            //     return post.published_at < two weeks ago;
+            // });
+
             return _.slice(source.posts, 0, 10);
         }
     },
@@ -30673,8 +30520,10 @@ var render = function() {
             [
               _c("td", [_c("h2", [_vm._v(_vm._s(source.name))])]),
               _vm._v(" "),
+              _c("td"),
+              _vm._v(" "),
               _vm._l(_vm.targets, function(target) {
-                return _c("th", [
+                return _c("th", { staticClass: "pr-4" }, [
                   _c("a", { attrs: { href: target.url, target: "_blank" } }, [
                     _vm._v(_vm._s(target.name))
                   ])
@@ -30685,7 +30534,7 @@ var render = function() {
           ),
           _vm._v(" "),
           _vm._l(_vm.limitPosts(source), function(post) {
-            return _c("Row", {
+            return _c("Post", {
               key: post.id,
               attrs: { targets: _vm.targets, post: post }
             })
@@ -30711,6 +30560,176 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(9)
+/* script */
+var __vue_script__ = __webpack_require__(49)
+/* template */
+var __vue_template__ = __webpack_require__(50)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Post.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1695e957", Component.options)
+  } else {
+    hotAPI.reload("data-v-1695e957", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 49 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['post', 'targets'],
+
+    data: function data() {
+        return {
+            submissions: []
+        };
+    },
+    mounted: function mounted() {
+        this.submissions = _.map(this.post.submissions, function (submission) {
+            return submission.target_id;
+        });
+    },
+
+
+    methods: {
+        // @todo can this be a computed prop instead?
+        submittedToTarget: function submittedToTarget(target) {
+            // @todo there's gotta be a cleaner way
+            return _.filter(this.submissions, function (submission_target_id) {
+                return submission_target_id == target.id;
+            }).length > 0;
+        },
+        toggleSubmission: function toggleSubmission(target, is_submitted) {
+            var data = {
+                'target_id': target.id,
+                'post_id': this.post.id
+            };
+
+            // @todo cleaner way to make this not a conditional?
+            // @todo There seems to be the need for a Vue-reactive way to modify this array?
+            if (is_submitted) {
+                _.remove(this.submissions, target.id);
+                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete('/api/submissions', { params: data });
+            } else {
+                this.submissions.push(target.id);
+                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/api/submissions', data);
+            }
+        }
+    }
+});
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "tr",
+    [
+      _c("td", { staticClass: "text-right pr-4" }, [
+        _c(
+          "a",
+          {
+            staticClass:
+              "no-underline hover:underline text-sm font-normal text-grey-darkest",
+            attrs: { href: this.post.guid }
+          },
+          [_vm._v(_vm._s(this.post.title))]
+        )
+      ]),
+      _vm._v(" "),
+      _c("td", { staticClass: "text-xs text-grey-darker uppercase pr-4" }, [
+        _vm._v(_vm._s(this.post.published_at))
+      ]),
+      _vm._v(" "),
+      _vm._l(this.targets, function(target) {
+        return _c("td", [
+          _c("input", {
+            attrs: { type: "checkbox" },
+            domProps: { checked: _vm.submittedToTarget(target) },
+            on: {
+              click: function($event) {
+                _vm.toggleSubmission(target, _vm.submittedToTarget(target))
+              }
+            }
+          })
+        ])
+      })
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-1695e957", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

@@ -1,8 +1,9 @@
 <template>
     <tr>
-        <td class="text-right pr-8">
-            <a :href="this.post.url" class="no-underline hover:underline text-sm font-normal text-grey-darkest">{{ this.post.title }}</a>
+        <td class="text-right pr-4">
+            <a :href="this.post.guid" class="no-underline hover:underline text-sm font-normal text-grey-darkest">{{ this.post.title }}</a>
         </td>
+        <td class="text-xs text-grey-darker uppercase pr-4">{{ this.post.published_at }}</td>
         <td v-for="target in this.targets">
             <input type="checkbox" :checked="submittedToTarget(target)" @click="toggleSubmission(target, submittedToTarget(target))">
         </td>
@@ -25,7 +26,6 @@
         },
 
         mounted() {
-            // console.log(this.post.submissions);
             this.submissions = _.map(this.post.submissions, (submission) => {
                 return submission.target_id;
             });
