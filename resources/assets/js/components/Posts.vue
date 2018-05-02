@@ -27,7 +27,6 @@
         },
 
         mounted() {
-            console.log(this.sources);
         }
     }
 </script>
