@@ -1,7 +1,7 @@
 <template>
     <tr>
         <td class="text-right pr-4">
-            <a :href="this.post.guid"
+            <a :href="post.guid"
                 class="no-underline hover:underline font-normal text-grey-darkest"
             >
                 {{ this.post.title }}
