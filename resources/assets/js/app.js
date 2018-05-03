@@ -8,6 +8,8 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+window.axios = require('axios');
+Vue.config.productionTip = false;
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -15,9 +17,10 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('Post', require('./components/Post.vue'));
-Vue.component('Posts', require('./components/Posts.vue'));
+import Dashboard from './components/Dashboard.vue';
 
 const app = new Vue({
-    el: '#app'
-});
+    components: {
+        Dashboard,
+    },
+}).$mount('#app');

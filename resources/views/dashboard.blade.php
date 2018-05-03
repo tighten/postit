@@ -22,7 +22,7 @@
                         {{ config('app.name', 'PostIt') }}
                     </h1>
 
-                    <Posts :targets="{{ json_encode($targets) }}" :sources="{{ json_encode($sources) }}"/>
+                    <Dashboard :targets='@json($targets)' :sources='@json($sources)'/>
                 </div>
             </div>
         </div>
