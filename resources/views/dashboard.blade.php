@@ -22,11 +22,14 @@
         <div class="flex items-center justify-center mt-8">
             <div class="flex flex-col justify-around h-full">
                 <div>
-
                     <Dashboard :targets='@json($targets)' :sources='@json($sources)'/>
                 </div>
             </div>
         </div>
+
+        <footer>
+            <p>Put on by the fine folks at <a href="https://tighten.co" title="Tighten">Tighten</a>.</p>
+        </footer>
     </div>
 
     <script src="/js/app.js"></script>

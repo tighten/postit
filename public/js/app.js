@@ -30862,6 +30862,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "tr",
+    { staticClass: "h-8" },
     [
       _c("td", { staticClass: "text-right pr-4" }, [
         _c(
