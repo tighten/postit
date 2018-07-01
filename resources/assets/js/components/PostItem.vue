@@ -1,7 +1,9 @@
 <template>
     <tr>
         <td class="text-right pr-4">
-            <a :href="post.guid"
+            <a
+                :href="post.guid"
+                :title="this.post.title"
                 class="no-underline hover:underline font-normal text-grey-darkest"
             >
                 {{ this.post.title }}
@@ -9,7 +11,7 @@
         </td>
 
         <td class="text-xs text-grey-darker uppercase pr-4">
-            {{ this.post.published_at }}
+            {{ this.published }}
         </td>
 
         <td v-for="target in targets">
@@ -23,22 +25,30 @@
 </template>
 
 <script>
-import PostItemSubmission from './PostItemSubmission.vue';
+import PostItemSubmission from "./PostItemSubmission.vue";
 
 export default {
     components: {
-        PostItemSubmission,
+        PostItemSubmission
     },
 
     props: {
         post: {},
-        targets: {},
+        targets: {}
+    },
+
+    computed: {
+        published() {
+            return moment(this.post.published_at).format("MM/DD/YYYY");
+        }
     },
 
     methods: {
         getSubmissionForTarget(target) {
-            return this.post.submissions.find((submission) => submission.target_id == target.id )
-        },
-    },
-}
+            return this.post.submissions.find(
+                submission => submission.target_id == target.id
+            );
+        }
+    }
+};
 </script>

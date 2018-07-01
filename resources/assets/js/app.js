@@ -1,14 +1,14 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require("./bootstrap");
 
-window.Vue = require('vue');
-window.axios = require('axios');
+window.Vue = require("vue");
+window.axios = require("axios");
+window.moment = require("moment");
 Vue.config.productionTip = false;
 
 /**
@@ -17,10 +17,10 @@ Vue.config.productionTip = false;
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import Dashboard from './components/Dashboard.vue';
+import Dashboard from "./components/Dashboard.vue";
 
 const app = new Vue({
     components: {
-        Dashboard,
-    },
-}).$mount('#app');
+        Dashboard
+    }
+}).$mount("#app");
