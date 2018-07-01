@@ -1,0 +1,11 @@
+header {
+  @apply .text-white;
+
+  background: url('../img/header-pattern.svg') repeat-x;
+  text-shadow: 3px 4px rgba(0,0,0,0.30);
+
+  h1 {
+    @apply .text-3xl;
+    @apply .tracking-wide;
+  }
+}

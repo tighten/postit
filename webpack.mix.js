@@ -19,7 +19,8 @@ mix.js("resources/assets/js/app.js", "public/js")
         processCssUrls: false,
         postCss: [tailwindcss("tailwind.js")]
     })
-    .purgeCss();
+    .purgeCss()
+    .copy("resources/assets/img/", "public/img");
 
 if (mix.inProduction()) {
     mix.version();

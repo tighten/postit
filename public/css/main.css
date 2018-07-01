@@ -662,8 +662,42 @@ button,
   }
 }
 
+html {
+  margin: 0;
+}
+
 body {
+  font-weight: 400;
+  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background: #f3eee8;
+}
+
+#app {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2rem;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
+}
+
+header {
+  color: #fff;
+  background: url("../img/header-pattern.svg") repeat-x;
+  text-shadow: 3px 4px rgba(0, 0, 0, .3);
+}
+
+header h1 {
+  font-size: 1.875rem;
+  letter-spacing: .05em;
 }
 
 .list-reset {
