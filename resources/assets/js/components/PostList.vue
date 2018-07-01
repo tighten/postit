@@ -15,16 +15,16 @@
 </template>
 
 <script>
-import PostItem from './PostItem.vue';
+import PostItem from "./PostItem.vue";
 
 export default {
     components: {
-        PostItem,
+        PostItem
     },
 
     props: {
         source: {},
-        targets: {},
+        targets: {}
     },
 
     computed: {
@@ -36,6 +36,6 @@ export default {
 
             return this.source.posts.slice(0, 5);
         }
-    },
-}
+    }
+};
 </script>

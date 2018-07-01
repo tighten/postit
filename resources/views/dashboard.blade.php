@@ -13,7 +13,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
-<body class="bg-brand-lightest font-sans font-normal">
+<body class="font-sans font-normal">
     <div class="flex flex-col" id="app">
         <div class="flex items-center justify-center mt-8">
             <div class="flex flex-col justify-around h-full">

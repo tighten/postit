@@ -1,0 +1,9 @@
+@tailwind preflight;
+
+@tailwind components;
+
+@import 'variables';
+@import 'base';
+@import 'header';
+
+@tailwind utilities;
