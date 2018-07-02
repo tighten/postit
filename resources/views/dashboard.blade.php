@@ -19,13 +19,11 @@
             <h1>{{ config('app.name', 'PostIt') }}</h1>
         </header>
 
-        <div class="flex items-center justify-center mt-8">
+        <section class="flex items-center justify-center mt-8">
             <div class="flex flex-col justify-around h-full">
-                <div>
-                    <Dashboard :targets='@json($targets)' :sources='@json($sources)'/>
-                </div>
+                <Dashboard :targets='@json($targets)' :sources='@json($sources)'/>
             </div>
-        </div>
+        </section>
 
         <footer>
             <p>Put on by the fine folks at <a href="https://tighten.co" title="Tighten">Tighten</a>.</p>

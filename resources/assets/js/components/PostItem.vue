@@ -1,5 +1,5 @@
 <template>
-    <tr class="h-8">
+    <tr>
         <td class="text-right pr-4">
             <a
                 :href="post.guid"

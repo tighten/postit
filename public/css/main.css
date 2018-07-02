@@ -690,6 +690,18 @@ body {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
 }
 
+th {
+  font-weight: 700;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  text-align: right;
+}
+
+th a {
+  color: #ffaa30;
+  text-decoration: none;
+}
+
 header {
   color: #fff;
   background: url("../img/header-pattern.svg") repeat-x;
@@ -697,7 +709,7 @@ header {
 }
 
 header h1 {
-  font-size: 1.875rem;
+  font-size: 2.25rem;
   letter-spacing: .05em;
 }
 
@@ -718,7 +730,7 @@ footer {
 }
 
 footer p {
-  color: #b8c2cc;
+  color: #8795a1;
 }
 
 footer p a {

@@ -1,12 +1,13 @@
 <template>
     <tbody>
         <tr>
-            <td class="text-right font-bold pr-4 pt-4">{{ source.name }}</td>
-
-            <td></td>
-
-            <th v-for="target in targets" class="pr-4 text-sm">
-                <a :href="target.url" target="_blank">{{ target.name }}</a>
+            <th class="">{{ source.name }}</th>
+            <th :key="target.id" v-for="target in targets" class="pr-4 text-sm" colspan="2">
+                <a
+                :href="target.url"
+                target="_blank"
+                :title="target.name"
+                >{{ target.name }}</a>
             </th>
         </tr>
 
@@ -29,12 +30,10 @@ export default {
 
     computed: {
         recent_posts() {
-            // @todo: It'd be nice if this instead just showed those published in the last two weeks
-            //
-            //      KD: check out https://github.com/xx45/dayjs for this; 2KB and you can do
-            //      isAfter(dayjs().subtract(14, 'day');)
-
-            return this.source.posts.slice(0, 5);
+            return this.source.posts.filter(
+                post =>
+                    moment(post.published_at) > moment().subtract(14, "days")
+            );
         }
     }
 };
