@@ -32,7 +32,7 @@ export default {
         recent_posts() {
             return this.source.posts.filter(
                 post =>
-                    moment(post.published_at) > moment().subtract(14, "days")
+                    moment(post.published_at) > moment().subtract(140, "days")
             );
         }
     }

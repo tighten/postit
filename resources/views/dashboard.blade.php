@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}" class="m-0">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,10 +13,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
-<body>
-    <div id="app">
+<body class="font-normal font-sans">
+    <div id="app" class="flex flex-col max-w-2xl mx-auto pb-8 bg-white shadow-md">
         <header class="flex py-8 justify-center">
-            <h1>{{ config('app.name', 'PostIt') }}</h1>
+            <h1 class="text-4xl tracking-wide">{{ config('app.name', 'PostIt') }}</h1>
         </header>
 
         <section class="flex items-center justify-center mt-8">

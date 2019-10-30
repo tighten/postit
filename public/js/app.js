@@ -47104,6 +47104,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -47206,7 +47211,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     computed: {
         recent_posts: function recent_posts() {
             return this.source.posts.filter(function (post) {
-                return moment(post.published_at) > moment().subtract(14, "days");
+                return moment(post.published_at) > moment().subtract(140, "days");
             });
         }
     }
