@@ -662,7 +662,12 @@ button,
   }
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   background: #f3eee8;
   font-size: 1.1em;
 }
@@ -705,7 +710,7 @@ footer p {
   color: #8795a1;
 }
 
-footer p a {
+footer a {
   color: #ffaa30;
   text-decoration: none;
 }

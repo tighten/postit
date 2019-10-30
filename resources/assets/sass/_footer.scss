@@ -10,10 +10,10 @@ footer {
 
   p {
     @apply .text-grey-dark;
+  }
 
-    a {
-      color: $color-yellow;
-      text-decoration: none;
-    }
+  a {
+    color: $color-yellow;
+    text-decoration: none;
   }
 }
