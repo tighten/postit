@@ -47195,6 +47195,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -47272,7 +47277,6 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PostItemSubmission_vue__ = __webpack_require__(168);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PostItemSubmission_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__PostItemSubmission_vue__);
-//
 //
 //
 //
@@ -47386,7 +47390,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
@@ -47440,7 +47443,6 @@ var render = function() {
         expression: "has_submission"
       }
     ],
-    staticClass: "my-2",
     staticStyle: { transform: "scale(1.25)" },
     attrs: { type: "checkbox" },
     domProps: {
@@ -47492,7 +47494,7 @@ var render = function() {
   return _c(
     "tr",
     [
-      _c("td", { staticClass: "text-right pr-4" }, [
+      _c("td", { staticClass: "text-right pb-4 pr-4" }, [
         _c(
           "a",
           {
@@ -47500,17 +47502,18 @@ var render = function() {
               "no-underline hover:underline font-normal text-grey-darkest",
             attrs: { href: _vm.post.guid, title: this.post.title }
           },
-          [_vm._v("\n            " + _vm._s(this.post.title) + "\n        ")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("td", { staticClass: "text-xs text-grey-darker uppercase pr-4" }, [
-        _vm._v("\n        " + _vm._s(this.published) + "\n    ")
+          [_vm._v("\n            " + _vm._s(_vm.post.title) + "\n        ")]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "text-xs text-grey-darker uppercase" }, [
+          _vm._v("\n            " + _vm._s(_vm.published) + "\n        ")
+        ])
       ]),
       _vm._v(" "),
       _vm._l(_vm.targets, function(target) {
         return _c(
           "td",
+          { key: target.id, staticClass: "align-top" },
           [
             _c("PostItemSubmission", {
               attrs: {
@@ -47551,7 +47554,7 @@ var render = function() {
       _c(
         "tr",
         [
-          _c("th", {}, [_vm._v(_vm._s(_vm.source.name))]),
+          _c("th", [_vm._v(_vm._s(_vm.source.name))]),
           _vm._v(" "),
           _vm._l(_vm.targets, function(target) {
             return _c(
@@ -47567,8 +47570,8 @@ var render = function() {
                   {
                     attrs: {
                       href: target.url,
-                      target: "_blank",
-                      title: target.name
+                      title: target.name,
+                      target: "_blank"
                     }
                   },
                   [_vm._v(_vm._s(target.name))]

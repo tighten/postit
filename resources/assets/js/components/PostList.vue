@@ -1,17 +1,22 @@
 <template>
     <tbody>
         <tr>
-            <th class="">{{ source.name }}</th>
+            <th>{{ source.name }}</th>
             <th :key="target.id" v-for="target in targets" class="pr-4 text-sm" colspan="2">
                 <a
-                :href="target.url"
-                target="_blank"
-                :title="target.name"
+                    :href="target.url"
+                    :title="target.name"
+                    target="_blank"
                 >{{ target.name }}</a>
             </th>
         </tr>
 
-        <PostItem v-for="post in recent_posts" :targets="targets" :post="post" :key="post.id" />
+        <PostItem
+            v-for="post in recent_posts"
+            :key="post.id"
+            :targets="targets"
+            :post="post"
+        />
     </tbody>
 </template>
 
