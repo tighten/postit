@@ -5,7 +5,6 @@ namespace App;
 use App\RssFeed;
 use App\Source;
 use Carbon\Carbon;
-use Exception;
 
 class RssSync
 {
@@ -41,6 +40,6 @@ class RssSync
 
     private function contentToAbstract($content)
     {
-        return substr($content, 0, 225) . '...';
+        return mb_substr($content, 0, 225) . '...';
     }
 }
