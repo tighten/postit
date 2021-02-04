@@ -2,7 +2,7 @@
     <tbody>
         <tr>
             <th>{{ source.name }}</th>
-            <th :key="target.id" v-for="target in targets" class="pr-4 text-sm" colspan="2">
+            <th :key="target.id" v-for="target in targets" class="pr-4 text-sm" colspan="1">
                 <a
                     :href="target.url"
                     :title="target.name"

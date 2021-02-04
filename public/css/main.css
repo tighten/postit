@@ -688,6 +688,7 @@ header {
   color: #fff;
   background: url("../img/header-pattern.svg") repeat-x;
   text-shadow: 3px 4px rgba(0, 0, 0, .3);
+  background-color: #eaad63;
 }
 
 footer {
