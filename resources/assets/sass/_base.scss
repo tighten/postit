@@ -1,0 +1,10 @@
+html {
+    @apply h-full;
+}
+
+body {
+    @apply h-full;
+
+    background: $bg-primary;
+    font-size: 1.1em;
+}

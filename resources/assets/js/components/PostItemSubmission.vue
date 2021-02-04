@@ -1,7 +1,6 @@
 <template>
     <input type="checkbox"
         v-model="has_submission"
-        class="my-2"
         style="transform: scale(1.25)"
     />
 </template>
