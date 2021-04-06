@@ -8,7 +8,7 @@ class TargetSeeder extends Seeder
     protected $targets = [
         [
             'name' => 'Laravel News',
-            'url' => 'https://laravel-news.com/links/create'
+            'url' => 'https://laravel-news.com/links/create',
         ],
     ];
 

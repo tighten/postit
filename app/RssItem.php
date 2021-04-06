@@ -21,7 +21,6 @@ class RssItem
         $enclosure,
         $author
     ) {
-
         $this->permalink = $permalink;
         $this->title = $title;
         $this->published_at = $published_at;
