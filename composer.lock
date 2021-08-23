@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a6b28ce56583d5861074806fca99e6b",
+    "content-hash": "56f93bf1ee56df1a4aaf0ccc36d56f91",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -6827,8 +6827,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4",
-        "ext-pdo": "*"
+        "php": "^7.4"
     },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"
