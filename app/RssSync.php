@@ -40,6 +40,6 @@ class RssSync
 
     private function contentToAbstract($content)
     {
-        return mb_substr($content, 0, 225) . '...';
+        return mb_substr($content, 0, 225).'...';
     }
 }
