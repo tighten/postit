@@ -11,7 +11,7 @@ class Post extends Model
 
     public function source()
     {
-        return $this->belongsTo(Post::class);
+        return $this->belongsTo(self::class);
     }
 
     public function submissions()

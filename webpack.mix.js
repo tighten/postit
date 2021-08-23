@@ -13,14 +13,14 @@ require("laravel-mix-purgecss");
  |
  */
 
-mix.js("resources/assets/js/app.js", "public/js")
-    .sass("resources/assets/sass/main.scss", "public/css")
+mix.js("resources/js/app.js", "public/js")
+    .sass("resources/sass/main.scss", "public/css")
     .options({
         processCssUrls: false,
         postCss: [tailwindcss("tailwind.js")]
     })
     .purgeCss()
-    .copy("resources/assets/img/", "public/img");
+    .copy("resources/img/", "public/img");
 
 if (mix.inProduction()) {
     mix.version();
