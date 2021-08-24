@@ -1,3 +1,5 @@
 <?php
 
-Route::get('/', 'DashboardController');
+use App\Http\Controllers\DashboardController;
+
+Route::get('/', DashboardController::class);
