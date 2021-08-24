@@ -1,4 +1,7 @@
 <?php
 
-Route::post('submissions', 'SubmissionController@store');
-Route::delete('submissions', 'SubmissionController@destroy');
+use App\Http\Controllers\SubmissionController;
+use Illuminate\Support\Facades\Route;
+
+Route::post('submissions', [SubmissionController::class, 'store']);
+Route::delete('submissions', [SubmissionController::class, 'destroy']);
