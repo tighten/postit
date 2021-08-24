@@ -13,7 +13,7 @@ require("laravel-mix-purgecss");
  |
  */
 
-mix.js("resources/js/app.js", "public/js")
+mix.js("resources/js/app.js", "public/js").vue()
     .sass("resources/sass/main.scss", "public/css")
     .options({
         processCssUrls: false,
