@@ -13,7 +13,7 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^6.3.1|^7.0.1",
         "laravel-frontend-presets/tailwindcss": "^4.3",
-        "laravel/framework": "^8.55",
+        "laravel/framework": "^8.58",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
         "willvincent/feeds": "^2.2"
