@@ -12,10 +12,16 @@ class TargetSeeder extends Seeder
             'name' => 'Laravel News',
             'url' => 'https://laravel-news.com/links/create',
         ],
+        [
+            'name' => 'Freek.dev',
+            'url' => 'https://freek.dev/community/create',
+        ],
     ];
 
     public function run()
     {
+        \DB::table('targets')->truncate();
+
         foreach ($this->targets as $target) {
             Target::create($target);
         }
