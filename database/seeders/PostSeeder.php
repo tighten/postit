@@ -13,26 +13,13 @@ class PostSeeder extends Seeder
     public function run()
     {
         \DB::table('posts')->truncate();
-        $posts = Post::factory()->count(20)->create();
 
-        $targets = Target::get();
-        $sources = Source::get();
         $faker = app(Generator::class);
-        $rangeTargets = range(0, $targets->count());
-        $rangeSources = range(0, $targets->count());
 
-        $posts->each(function ($post) use ($targets, $rangeTargets, $faker) {
-
-            $targetIds = $faker->randomElements(
-                $targets->pluck('id')->toArray(),
-                $faker->randomElement($rangeTargets)
-            );
-
-            collect($targetIds)->each(function ($targetId) use ($post) {
-                $post->submissions()->create(['target_id' => $targetId]);
-
-            });
-
+        $sources = Source::get()->each(function ($source) {
+            Post::factory()->count(10)->create([
+                'source_id' => $source->id,
+            ]);
         });
     }
 }

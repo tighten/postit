@@ -14,7 +14,9 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            'source_id' => $this->faker->randomElement(Source::pluck('id')),
+            'source_id' => function () {
+                return Source::factory()->create()->id;
+            },
             'guid' => $this->faker->lexify("???????????????"),
             'title' => $this->faker->sentence(6),
             'abstract' => $this->faker->paragraph(2),
