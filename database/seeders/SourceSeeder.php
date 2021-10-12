@@ -28,6 +28,8 @@ class SourceSeeder extends Seeder
 
     public function run()
     {
+        \DB::table('sources')->truncate();
+
         foreach ($this->sources as $source) {
             Source::create($source);
         }

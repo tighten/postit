@@ -1,0 +1,42 @@
+name: Run Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        php: [7.4, 8.0]
+
+    name: PHP:${{ matrix.php }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup PHP, with composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          tools: composer:v2
+          coverage: none
+
+      - name: Copy .env file
+        run: cp .env.tests .env
+
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --no-suggest --no-progress --prefer-dist
+        env:
+
+      - name: Generate application key
+        run: php artisan key:generate
+
+      - name: Run Unit tests
+        run: |
+          vendor/bin/phpunit
+
