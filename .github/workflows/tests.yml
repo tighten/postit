@@ -31,7 +31,6 @@ jobs:
 
       - name: Install Composer dependencies
         run: composer install --no-interaction --no-suggest --no-progress --prefer-dist
-        env:
 
       - name: Generate application key
         run: php artisan key:generate
