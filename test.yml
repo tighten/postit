@@ -24,22 +24,17 @@ jobs:
         with:
           php-version: ${{ matrix.php }}
           tools: composer:v2
-          coverage: xdebug
+          coverage: none
 
-      - name: Get composer cache directory
-        id: composer-cache
-        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
-
-      - name: Cache composer dependencies
-        uses: actions/cache@v2
-        with:
-          path: ${{ steps.composer-cache.outputs.dir }}
-          key: dependencies-php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
-          restore-keys: dependencies-php-${{ matrix.php }}-composer-
+      - name: Copy .env file
+        run: cp .env.tests .env
 
       - name: Install Composer dependencies
-        run: |
-          composer install --prefer-dist --no-interaction --no-suggest
+        run: composer install --no-interaction --no-suggest --no-progress --prefer-dist
+        env:
+
+      - name: Generate application key
+        run: php artisan key:generate
 
       - name: Run Unit tests
         run: |
