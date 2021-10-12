@@ -1,3 +1,5 @@
+![Github Actions Test Status for tighten/postit](https://github.com/tighten/postit/actions/workflows/tests.yml/badge.svg)
+
 # PostIt
 A helpful list of sources to submit original content to. 
 
