@@ -15,7 +15,7 @@
         "laravel-frontend-presets/tailwindcss": "^4.3",
         "laravel/framework": "^8.75",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "^3.3",
+        "laravel/ui": "^3.4",
         "willvincent/feeds": "^2.2"
     },
     "require-dev": {
