@@ -14,7 +14,7 @@ class TargetSeeder extends Seeder
         ],
         [
             'name' => 'Freek.dev',
-            'url' => 'https://freek.dev/community/create',
+            'url' => 'https://freek.dev/community/link/create',
         ],
     ];
 
