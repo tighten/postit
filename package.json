@@ -23,6 +23,6 @@
         "vue-template-compiler": "^2.6.14"
     },
     "dependencies": {
-        "moment": "^2.22.2"
+        "moment": "^2.29.2"
     }
 }
