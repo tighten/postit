@@ -12,5 +12,6 @@ class DatabaseSeeder extends Seeder
         $this->call(TargetSeeder::class);
         $this->call(PostSeeder::class);
         $this->call(SubmissionSeeder::class);
+        $this->call(TrackingSettingSeeder::class);
     }
 }
