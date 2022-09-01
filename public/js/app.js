@@ -2245,6 +2245,38 @@ __webpack_require__.r(__webpack_exports__);
       sources: {},
       mediums: {}
     };
+  },
+  methods: {
+    getSettings: function getSettings() {
+      var state = this;
+      axios.get('/tracking/settings').then(function (response) {
+        response.data.forEach(function (setting) {
+          switch (setting.key) {
+            case 'campaigns':
+              state.campaigns = setting.value;
+              break;
+
+            case 'sources':
+              state.sources = setting.value;
+              break;
+
+            case 'mediums':
+              state.mediums = setting.value;
+              break;
+
+            default:
+              break;
+          }
+        });
+      })["catch"](function (error) {
+        console.log(error);
+      }).then(function () {
+        state.loading = false;
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getSettings();
   }
 });
 
@@ -2518,9 +2550,9 @@ var render = function render() {
       _c = _vm._self._c;
 
   return _c("div", {
-    staticClass: "grid grid-cols-3 gap-4"
+    staticClass: "grid grid-cols-3 gap-4 w-full px-4"
   }, [_c("div", {
-    staticClass: "divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow"
+    staticClass: "divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow max-h-96 overflow-y-auto"
   }, [_c("div", {
     staticClass: "px-4 py-5 sm:px-6"
   }, [_vm._v("\n            Campaigns\n        ")]), _vm._v(" "), _c("div", {
@@ -2529,8 +2561,18 @@ var render = function render() {
     attrs: {
       loading: _vm.loading
     }
-  })], 1)]), _vm._v(" "), _c("div", {
-    staticClass: "divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow"
+  }, [_c("ul", {
+    staticClass: "divide-y divide-gray-200",
+    attrs: {
+      role: "list"
+    }
+  }, _vm._l(_vm.campaigns, function (label, value) {
+    return _c("li", {
+      key: value,
+      staticClass: "py-4"
+    }, [_vm._v("\n                        " + _vm._s(label) + "\n                    ")]);
+  }), 0)])], 1)]), _vm._v(" "), _c("div", {
+    staticClass: "divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow max-h-96 overflow-y-auto"
   }, [_c("div", {
     staticClass: "px-4 py-5 sm:px-6"
   }, [_vm._v("\n            Sources\n        ")]), _vm._v(" "), _c("div", {
@@ -2539,8 +2581,18 @@ var render = function render() {
     attrs: {
       loading: _vm.loading
     }
-  })], 1)]), _vm._v(" "), _c("div", {
-    staticClass: "divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow"
+  }, [_c("ul", {
+    staticClass: "divide-y divide-gray-200",
+    attrs: {
+      role: "list"
+    }
+  }, _vm._l(_vm.sources, function (label, value) {
+    return _c("li", {
+      key: value,
+      staticClass: "py-4"
+    }, [_vm._v("\n                        " + _vm._s(label) + "\n                    ")]);
+  }), 0)])], 1)]), _vm._v(" "), _c("div", {
+    staticClass: "divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow max-h-96 overflow-y-auto"
   }, [_c("div", {
     staticClass: "px-4 py-5 sm:px-6"
   }, [_vm._v("\n            Mediums\n        ")]), _vm._v(" "), _c("div", {
@@ -2549,7 +2601,17 @@ var render = function render() {
     attrs: {
       loading: _vm.loading
     }
-  })], 1)])]);
+  }, [_c("ul", {
+    staticClass: "divide-y divide-gray-200",
+    attrs: {
+      role: "list"
+    }
+  }, _vm._l(_vm.mediums, function (label, value) {
+    return _c("li", {
+      key: value,
+      staticClass: "py-4"
+    }, [_vm._v("\n                        " + _vm._s(label) + "\n                    ")]);
+  }), 0)])], 1)])]);
 };
 
 var staticRenderFns = [];

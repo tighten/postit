@@ -19,9 +19,11 @@ Vue.config.productionTip = false;
  */
 
 import Dashboard from "./components/Dashboard.vue";
+import TrackingSettings from "./components/TrackingSettings.vue";
 
 const app = new Vue({
     components: {
-        Dashboard
+        Dashboard,
+        TrackingSettings
     }
 }).$mount("#app");

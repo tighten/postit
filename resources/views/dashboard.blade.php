@@ -1,40 +1,13 @@
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}" class="m-0">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.base')
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+@section('content')
+    <header class="flex py-8 justify-center text-white">
+        <h1 class="text-4xl tracking-wide">{{ config('app.name', 'PostIt') }}</h1>
+    </header>
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-</head>
-<body class="font-normal font-sans">
-    <div id="app" class="flex flex-col max-w-2xl mx-auto pb-8 bg-white shadow-md">
-        <header class="flex py-8 justify-center">
-            <h1 class="text-4xl tracking-wide">{{ config('app.name', 'PostIt') }}</h1>
-        </header>
-
-        <section class="flex justify-center mt-8">
-            <div class="flex flex-col justify-around h-full">
-                <Dashboard :targets='@json($targets)' :sources='@json($sources)'/>
-            </div>
-        </section>
-
-        <footer>
-            <p class="mr-3">
-                Brought to you by the lovely humans at
-                <a href="https://tighten.co">Tighten</a>
-            </p>
-
-            <a href="https://github.com/tightenco/postit">Issues/Feature Requests</a>
-        </footer>
-    </div>
-
-    <script src="/js/app.js"></script>
-</body>
-</html>
+    <section class="flex justify-center mt-8">
+        <div class="flex flex-col justify-around h-full">
+            <Dashboard v-bind:targets="{{ $targets }}" v-bind:sources="{{ $sources }}"/>
+        </div>
+    </section>
+@endsection

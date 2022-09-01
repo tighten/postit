@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+header {
+    text-shadow: 3px 4px rgba(0,0,0,0.30);
+    background: #eaad63 url('../img/header-pattern.svg') repeat-x;
+}

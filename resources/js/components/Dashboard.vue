@@ -18,8 +18,8 @@ export default {
     },
 
     props: {
-        sources: {},
-        targets: {},
+        sources: Object|Array,
+        targets: Object|Array,
     },
 }
 </script>

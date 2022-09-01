@@ -31,7 +31,7 @@ class TrackingSettingSeeder extends Seeder
                 'github' => 'GitHub',
                 'laravel_news' => 'Laravel News',
                 'calebporzio' => 'calebporzio.com',
-                'mattstauffer' => 'mattstauffer.COM',
+                'mattstauffer' => 'mattstauffer.com',
                 'jigsaw' => 'Jigsaw',
                 'laracasts' => 'Laracasts',
             ],
