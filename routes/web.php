@@ -10,7 +10,6 @@ Route::prefix('tracking')->name('tracking.')->group(function () {
     Route::get('/', function () {
         return view('tracking');
     });
-    //->middleware('auth.basic');
 
     Route::resource('settings', TrackingSettingController::class);
 });

@@ -3,13 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\TrackingSetting;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 
 class TrackingSettingController extends Controller
 {
-    public function index()
+    public function __construct()
     {
-        return TrackingSetting::all();
+        //$this->middleware('auth.basic')->except('index');
+    }
+
+    public function index(Request $request): Collection | View
+    {
+        if($request->expectsJson()) {
+            return TrackingSetting::all();
+        }
+
+        return view('tracking-settings');
     }
 
     public function create()
