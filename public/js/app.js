@@ -2273,7 +2273,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     getSettings: function getSettings() {
       var state = this;
-      axios.get('/tracking/settings').then(function (response) {
+      axios.get('/api/tracking-settings').then(function (response) {
         response.data.forEach(function (setting) {
           switch (setting.key) {
             case 'campaigns':

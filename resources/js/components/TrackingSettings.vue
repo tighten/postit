@@ -130,7 +130,7 @@ export default {
         getSettings() {
             let state = this;
 
-            axios.get('/tracking/settings')
+            axios.get('/api/tracking-settings')
                 .then(function (response) {
                     response.data.forEach((setting) => {
                         switch (setting.key) {

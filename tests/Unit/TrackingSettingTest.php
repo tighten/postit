@@ -45,10 +45,18 @@ class TrackingSettingTest extends TestCase
     }
 
     /** @test */
-    public function can_get_settings_without_authentication()
+    public function can_get_settings_with_authentication()
+    {
+        $this->actingAs(User::factory()->create())
+            ->get(route('tracking.settings.index'))
+            ->assertOk();
+    }
+
+    /** @test */
+    public function cannot_get_settings_without_authentication()
     {
         $this->get(route('tracking.settings.index'))
-            ->assertOk();
+            ->assertUnauthorized();
     }
 
     /** @test */
