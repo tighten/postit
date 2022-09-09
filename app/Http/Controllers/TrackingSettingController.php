@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\TrackingSetting;
-use Illuminate\Contracts\View\View;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
 class TrackingSettingController extends Controller
@@ -17,7 +14,7 @@ class TrackingSettingController extends Controller
         $this->middleware('auth.basic');
     }
 
-    public function index(Request $request): Collection | View
+    public function index(Request $request)
     {
         if($request->expectsJson()) {
             return TrackingSetting::all();
@@ -31,7 +28,7 @@ class TrackingSettingController extends Controller
         //
     }
 
-    public function store(Request $request): JsonResponse
+    public function store(Request $request)
     {
         $request->validate([
             'key' => 'required|string|max:50',
@@ -59,17 +56,17 @@ class TrackingSettingController extends Controller
         ]);
     }
 
-    public function show(TrackingSetting $setting): TrackingSetting
+    public function show(TrackingSetting $setting)
     {
         return $setting;
     }
 
-    public function edit(TrackingSetting $setting): TrackingSetting
+    public function edit(TrackingSetting $setting)
     {
         return $setting;
     }
 
-    public function update(Request $request, TrackingSetting $setting): JsonResponse
+    public function update(Request $request, TrackingSetting $setting)
     {
         $request->validate([
             'value' => 'required|array',
@@ -90,7 +87,7 @@ class TrackingSettingController extends Controller
         ]);
     }
 
-    public function destroy(TrackingSetting $setting): JsonResponse
+    public function destroy(TrackingSetting $setting)
     {
         $setting->delete();
 
