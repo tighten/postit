@@ -31,6 +31,11 @@ php artisan migrate
 php artisan db:seed    
 ```
 
+### Create a User
+```bash
+php artisan user:create
+```
+
 ## Tasks
 - [ ] Checklist for pre and post publish on our individual blog posts?
 - [ ] Find other places to apply it to
