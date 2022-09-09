@@ -13,5 +13,9 @@ class TrackingSetting extends Model
         'value' => 'array',
     ];
 
+    protected $attributes = [
+        'value' => "{}",
+    ];
+
     protected $guarded = [];
 }

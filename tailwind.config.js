@@ -45,6 +45,7 @@ module.exports = {
       colors: {
         primary: "#f3eee8",
         yellow: "#ffaa30",
+        "yellow-darker": "#F0A02D",
         "brand-darkest": "#453411",
         "brand-darker": "#684f1d",
         "brand-dark": "#f2d024",
