@@ -14,7 +14,7 @@ class TrackingSettingController extends Controller
 {
     public function __construct()
     {
-        //$this->middleware('auth.basic')->except('index');
+        $this->middleware('auth.basic')->except('index');
     }
 
     public function index(Request $request): Collection | View
@@ -59,14 +59,14 @@ class TrackingSettingController extends Controller
         ]);
     }
 
-    public function show($id)
+    public function show(TrackingSetting $setting): TrackingSetting
     {
-        //
+        return $setting;
     }
 
-    public function edit($id)
+    public function edit(TrackingSetting $setting): TrackingSetting
     {
-        //
+        return $setting;
     }
 
     public function update(Request $request, TrackingSetting $setting): JsonResponse
@@ -90,8 +90,12 @@ class TrackingSettingController extends Controller
         ]);
     }
 
-    public function destroy($id)
+    public function destroy(TrackingSetting $setting): JsonResponse
     {
-        //
+        $setting->delete();
+
+        return response()->json([
+            'success' => 'Setting has been successfully deleted.',
+        ]);
     }
 }
