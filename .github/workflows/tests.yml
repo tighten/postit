@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Fetch Current Releases
-        uses: tighten/phpreleases-action@v0.1.0
+        uses: tighten/phpreleases-action@v0.1.0-beta
         id: releases
 
   build:
