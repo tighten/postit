@@ -2,16 +2,25 @@ name: Run Tests
 
 on:
   push:
-    branches: [main]
+    branches: [krc/add-utm-generator-function]
   pull_request:
 
 jobs:
+  output_releases:
+    name: Generate PHP Releases Array
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Current Releases
+        uses: tighten/phpreleases-action@v0.1.0
+        id: releases
+
   build:
     runs-on: ubuntu-latest
+    needs: output_releases
     strategy:
       fail-fast: true
       matrix:
-        php: [7.4, 8.0]
+        php: ${{fromJSON(needs.output_releases.outputs.range)}}
 
     name: PHP:${{ matrix.php }}
 
