@@ -6,6 +6,6 @@
     </header>
 
     <section class="flex justify-center mt-8">
-        <tracking-settings/>
+        <tracking/>
     </section>
 @endsection

@@ -13,7 +13,7 @@ jobs:
       range: ${{ steps.releases.outputs.range }}
     steps:
       - name: Fetch Current Releases
-        uses: tighten/phpreleases-action@v1.0.0-alpha
+        uses: tighten/phpreleases-action@v1
         id: releases
         with:
           releases: '7.4'
