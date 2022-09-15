@@ -9,6 +9,8 @@ jobs:
   output_releases:
     name: Generate PHP Releases Array
     runs-on: ubuntu-latest
+    outputs:
+      range: ${{ steps.releases.outputs.range }}
     steps:
       - name: Fetch Current Releases
         uses: tighten/phpreleases-action@v1.0.0-alpha
