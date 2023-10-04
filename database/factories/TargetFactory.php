@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TargetFactory extends Factory
 {
-    protected $model = Target::class;
-
     public function definition()
     {
         return [
