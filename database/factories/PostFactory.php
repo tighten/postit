@@ -19,7 +19,7 @@ class PostFactory extends Factory
             'guid' => $this->faker->lexify('???????????????'),
             'title' => $this->faker->sentence(6),
             'abstract' => $this->faker->paragraph(2),
-            'author' => $this->faker->name,
+            'author' => $this->faker->name(),
             'published_at' => $this->faker->dateTimeThisYear(),
         ];
     }
