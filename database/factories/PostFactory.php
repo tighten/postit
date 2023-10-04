@@ -4,7 +4,6 @@ namespace Database\Factories;
 
 use App\Post;
 use App\Source;
-use App\Target;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PostFactory extends Factory
@@ -17,7 +16,7 @@ class PostFactory extends Factory
             'source_id' => function () {
                 return Source::factory()->create()->id;
             },
-            'guid' => $this->faker->lexify("???????????????"),
+            'guid' => $this->faker->lexify('???????????????'),
             'title' => $this->faker->sentence(6),
             'abstract' => $this->faker->paragraph(2),
             'author' => $this->faker->name,

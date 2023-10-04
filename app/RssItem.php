@@ -5,11 +5,17 @@ namespace App;
 class RssItem
 {
     public $permalink;
+
     public $title;
+
     public $published_at;
+
     public $guid;
+
     public $content;
+
     public $enclosure;
+
     public $author;
 
     private function __construct(

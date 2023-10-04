@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Post;
 use App\Source;
-use App\Target;
 use Faker\Generator;
 use Illuminate\Database\Seeder;
 
