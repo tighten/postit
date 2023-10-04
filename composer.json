@@ -8,21 +8,21 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^7.4|^8.0",
+        "php": "^8.0",
         "bugsnag/bugsnag-laravel": "^2.24",
-        "guzzlehttp/guzzle": "^6.3.1|^7.0.1",
+        "guzzlehttp/guzzle": "^7.2",
         "laravel-frontend-presets/tailwindcss": "^4.3",
-        "laravel/framework": "^8.83",
-        "laravel/tinker": "^2.5",
+        "laravel/framework": "^9.52",
+        "laravel/tinker": "^2.7",
         "laravel/ui": "^3.4",
         "willvincent/feeds": "^2.3"
     },
     "require-dev": {
         "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^5.10",
+        "nunomaduro/collision": "^6.3",
         "phpunit/phpunit": "^9.5.10",
         "fakerphp/faker": "^1.9.1",
-        "facade/ignition": "^2.5"
+        "spatie/laravel-ignition": "^1.4"
     },
     "autoload": {
         "psr-4": {
@@ -53,7 +53,7 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ]
     },
     "config": {
