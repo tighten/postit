@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Post;
 use App\Source;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
