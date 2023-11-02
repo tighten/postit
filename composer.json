@@ -11,7 +11,6 @@
         "php": "^8.0",
         "bugsnag/bugsnag-laravel": "^2.24",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel-frontend-presets/tailwindcss": "^4.3",
         "laravel/framework": "^9.52",
         "laravel/tinker": "^2.7",
         "laravel/ui": "^3.4",
