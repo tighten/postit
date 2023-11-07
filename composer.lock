@@ -760,8 +760,8 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-12T05:21:21+00:00"
-            "abandoned": true,
+            "time": "2023-10-12T05:21:21+00:00",
+            "abandoned": true
         },
         {
             "name": "graham-campbell/result-type",
