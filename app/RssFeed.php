@@ -7,9 +7,13 @@ use Feeds;
 class RssFeed
 {
     public $feed;
+
     public $url;
+
     public $permalink;
+
     public $title;
+
     public $items;
 
     private function __construct($title, $permalink, $items)

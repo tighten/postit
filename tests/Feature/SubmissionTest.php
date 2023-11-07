@@ -5,8 +5,6 @@ namespace Tests\Feature;
 use App\Post;
 use App\Submission;
 use App\Target;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class SubmissionTest extends TestCase

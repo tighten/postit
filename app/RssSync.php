@@ -2,8 +2,6 @@
 
 namespace App;
 
-use App\RssFeed;
-use App\Source;
 use Carbon\Carbon;
 
 class RssSync
