@@ -761,6 +761,7 @@
                 }
             ],
             "time": "2023-10-12T05:21:21+00:00"
+            "abandoned": true,
         },
         {
             "name": "graham-campbell/result-type",
@@ -5058,6 +5059,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/routing/zipball/82616e59acd3e3d9c916bba798326cb7796d7d31",
                 "reference": "82616e59acd3e3d9c916bba798326cb7796d7d31",
+
                 "shasum": ""
             },
             "require": {
