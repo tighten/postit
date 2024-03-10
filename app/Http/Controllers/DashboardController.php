@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
 use App\Source;
 use App\Target;
+use Illuminate\View\View;
 
 class DashboardController extends Controller
 {
