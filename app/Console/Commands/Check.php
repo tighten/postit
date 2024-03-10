@@ -37,7 +37,7 @@ class Check extends Command
      *
      * @return mixed
      */
-    public function handle()
+    public function handle(): void
     {
         Source::all()->each(function ($source) {
             $this->syncSource($source);
