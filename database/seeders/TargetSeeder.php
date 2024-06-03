@@ -18,7 +18,7 @@ class TargetSeeder extends Seeder
         ],
     ];
 
-    public function run()
+    public function run(): void
     {
         \DB::table('targets')->truncate();
 

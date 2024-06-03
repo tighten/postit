@@ -11,7 +11,7 @@ use Tests\TestCase;
 class SeederTest extends TestCase
 {
     /** @test */
-    public function it_can_seed_the_database()
+    public function it_can_seed_the_database(): void
     {
         \Artisan::call('db:seed');
 

@@ -26,7 +26,7 @@ class SourceSeeder extends Seeder
         ],
     ];
 
-    public function run()
+    public function run(): void
     {
         \DB::table('sources')->truncate();
 

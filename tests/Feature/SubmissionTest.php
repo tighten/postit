@@ -10,7 +10,7 @@ use Tests\TestCase;
 class SubmissionTest extends TestCase
 {
     /** @test */
-    public function it_can_create_a_submission()
+    public function it_can_create_a_submission(): void
     {
         $response = $this->post(route('api.submissions.store'), [
             'target_id' => $targetId = Target::factory()->create(['id' => 5])->id,
@@ -27,7 +27,7 @@ class SubmissionTest extends TestCase
     }
 
     /** @test */
-    public function it_can_delete_a_submission()
+    public function it_can_delete_a_submission(): void
     {
         $submission = Submission::factory()->create();
         $this->assertCount(1, Submission::get());
