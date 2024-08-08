@@ -9,19 +9,18 @@
     "type": "project",
     "require": {
         "php": "^8.0",
-        "bugsnag/bugsnag-laravel": "^2.24",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.52",
         "laravel/tinker": "^2.7",
         "laravel/ui": "^3.4",
+        "spatie/laravel-ignition": "^1.6",
         "willvincent/feeds": "^2.3"
     },
     "require-dev": {
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.3",
         "phpunit/phpunit": "^9.5.10",
-        "fakerphp/faker": "^1.9.1",
-        "spatie/laravel-ignition": "^1.4"
+        "fakerphp/faker": "^1.9.1"
     },
     "autoload": {
         "psr-4": {
