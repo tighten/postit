@@ -8,13 +8,13 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^9.52",
-        "laravel/tinker": "^2.7",
-        "laravel/ui": "^3.4",
-        "spatie/laravel-ignition": "^1.6",
-        "willvincent/feeds": "^2.3"
+        "laravel/framework": "^10.48",
+        "laravel/tinker": "^2.8",
+        "laravel/ui": "^4.2",
+        "spatie/laravel-ignition": "^2.0",
+        "willvincent/feeds": "^2.5"
     },
     "require-dev": {
         "mockery/mockery": "^1.4.4",
@@ -59,6 +59,6 @@
         "sort-packages": true,
         "optimize-autoloader": true
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
