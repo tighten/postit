@@ -5,11 +5,12 @@ namespace Tests\Feature;
 use App\Post;
 use App\Submission;
 use App\Target;
+use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 
 class SubmissionTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function it_can_create_a_submission(): void
     {
         $response = $this->post(route('api.submissions.store'), [
@@ -26,7 +27,7 @@ class SubmissionTest extends TestCase
         $this->assertEquals($sourceId, $submission->post_id);
     }
 
-    /** @test */
+    #[Test]
     public function it_can_delete_a_submission(): void
     {
         $submission = Submission::factory()->create();
