@@ -9,17 +9,18 @@
     "type": "project",
     "require": {
         "php": "^8.2",
-        "laravel/framework": "^11.48",
-        "laravel/tinker": "^2.9",
-        "laravel/ui": "^4.4",
-        "spatie/laravel-ignition": "^2.4",
-        "willvincent/feeds": "^2.6"
+        "laravel/framework": "^12.52",
+        "laravel/tinker": "^2.10.1",
+        "laravel/ui": "^4.6",
+        "spatie/laravel-ignition": "^2.9",
+        "willvincent/feeds": "^2.7"
     },
     "require-dev": {
         "mockery/mockery": "^1.6",
-        "nunomaduro/collision": "^8.0",
-        "phpunit/phpunit": "^10.5",
-        "fakerphp/faker": "^1.23"
+        "nunomaduro/collision": "^8.6",
+        "phpunit/phpunit": "^11.5.3",
+        "fakerphp/faker": "^1.23",
+        "laravel/pail": "^1.2.2"
     },
     "autoload": {
         "psr-4": {
@@ -51,6 +52,25 @@
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite --kill-others"
+        ],
+        "setup": [
+            "composer install",
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php artisan key:generate",
+            "@php artisan migrate --force",
+            "npm install",
+            "npm run build"
+        ],
+        "test": [
+            "@php artisan config:clear --ansi",
+            "@php artisan test"
+        ],
+        "pre-package-uninstall": [
+            "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ]
     },
     "config": {
