@@ -1,1 +1,0 @@
-{"version":2,"defects":[],"times":{"Tests\\Feature\\SeederTest::it_can_seed_the_database":0.022,"Tests\\Feature\\SubmissionTest::it_can_create_a_submission":0.011,"Tests\\Feature\\SubmissionTest::it_can_delete_a_submission":0.005}}
