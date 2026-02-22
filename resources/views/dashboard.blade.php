@@ -10,8 +10,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Styles -->
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    @vite('resources/js/app.js')
 </head>
 <body class="font-normal font-sans">
     <div id="app" class="flex flex-col max-w-2xl mx-auto pb-8 bg-white shadow-md">
@@ -35,6 +34,5 @@
         </footer>
     </div>
 
-    <script src="/js/app.js"></script>
 </body>
 </html>

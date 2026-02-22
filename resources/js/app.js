@@ -1,4 +1,3 @@
-import Vue from "vue";
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -6,6 +5,7 @@ import Vue from "vue";
  */
 
 import "./bootstrap";
+import "../sass/main.scss";
 
 import Vue from "vue";
 window.Vue = Vue;
