@@ -1,15 +1,18 @@
-import Vue from "vue";
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require("./bootstrap");
+import "./bootstrap";
+import "../sass/main.scss";
 
-window.Vue = require("vue");
-window.axios = require("axios");
-window.moment = require("moment");
+import Vue from "vue";
+window.Vue = Vue;
+import axios from "axios";
+window.axios = axios;
+import moment from "moment";
+window.moment = moment;
 Vue.config.productionTip = false;
 
 /**
