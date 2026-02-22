@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Target;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TargetSeeder extends Seeder
 {
@@ -20,7 +21,7 @@ class TargetSeeder extends Seeder
 
     public function run(): void
     {
-        \DB::table('targets')->truncate();
+        DB::table('targets')->truncate();
 
         foreach ($this->targets as $target) {
             Target::create($target);

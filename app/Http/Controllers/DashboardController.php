@@ -10,8 +10,6 @@ class DashboardController extends Controller
 {
     public function __invoke(): View
     {
-        return view('dashboard')
-            ->with('targets', Target::all())
-            ->with('sources', Source::with(['posts', 'posts.submissions'])->get());
+        return view('dashboard', ['targets' => Target::all(), 'sources' => Source::with(['posts', 'posts.submissions'])->get()]);
     }
 }

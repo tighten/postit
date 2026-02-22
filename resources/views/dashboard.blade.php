@@ -20,7 +20,7 @@
 
         <section class="flex justify-center mt-8">
             <div class="flex flex-col justify-around h-full">
-                <Dashboard :targets='@json($targets)' :sources='@json($sources)'/>
+                <Dashboard :targets="{{ json_encode($targets) }}" :sources="{{ json_encode($sources) }}"/>
             </div>
         </section>
 

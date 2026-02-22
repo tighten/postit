@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Source;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class SourceSeeder extends Seeder
 {
@@ -28,7 +29,7 @@ class SourceSeeder extends Seeder
 
     public function run(): void
     {
-        \DB::table('sources')->truncate();
+        DB::table('sources')->truncate();
 
         foreach ($this->sources as $source) {
             Source::create($source);

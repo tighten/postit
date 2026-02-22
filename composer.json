@@ -13,6 +13,7 @@
         "laravel/tinker": "^2.10.1",
         "laravel/ui": "^4.6",
         "spatie/laravel-ignition": "^2.9",
+        "tightenco/duster": "^3.3",
         "willvincent/feeds": "^2.7"
     },
     "require-dev": {

@@ -6,12 +6,13 @@ use App\Post;
 use App\Source;
 use Faker\Generator;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class PostSeeder extends Seeder
 {
     public function run(): void
     {
-        \DB::table('posts')->truncate();
+        DB::table('posts')->truncate();
 
         $faker = app(Generator::class);
 

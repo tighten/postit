@@ -7,12 +7,13 @@ use App\Source;
 use App\Target;
 use Faker\Generator;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class SubmissionSeeder extends Seeder
 {
     public function run(): void
     {
-        \DB::table('submissions')->truncate();
+        DB::table('submissions')->truncate();
 
         $targets = Target::get();
         $sources = Source::get();
