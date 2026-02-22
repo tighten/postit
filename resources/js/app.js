@@ -5,11 +5,14 @@ import Vue from "vue";
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require("./bootstrap");
+import "./bootstrap";
 
-window.Vue = require("vue");
-window.axios = require("axios");
-window.moment = require("moment");
+import Vue from "vue";
+window.Vue = Vue;
+import axios from "axios";
+window.axios = axios;
+import moment from "moment";
+window.moment = moment;
 Vue.config.productionTip = false;
 
 /**
