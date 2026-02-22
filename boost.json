@@ -1,0 +1,11 @@
+{
+    "agents": [
+        "cursor",
+        "claude_code"
+    ],
+    "guidelines": true,
+    "packages": [
+        "tightenco/duster"
+    ],
+    "skills": []
+}
