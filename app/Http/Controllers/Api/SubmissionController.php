@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Submission;
+use App\Models\Submission;
 
 class SubmissionController extends Controller
 {

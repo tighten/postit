@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Post;
-use App\Source;
+use App\Models\Post;
+use App\Models\Source;
 use Faker\Generator;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;

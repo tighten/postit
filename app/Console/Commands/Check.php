@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use App\RssSync;
-use App\Source;
+use App\Models\Source;
 use Illuminate\Console\Command;
 
 class Check extends Command
