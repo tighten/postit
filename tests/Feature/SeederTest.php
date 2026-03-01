@@ -7,7 +7,6 @@ use App\Target;
 use Illuminate\Support\Facades\Artisan;
 use Tests\TestCase;
 
-uses(Tests\TestCase::class);
 
 it('can seed the database', function () {
     Artisan::call('db:seed');
