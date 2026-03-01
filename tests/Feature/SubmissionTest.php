@@ -3,8 +3,6 @@
 use App\Post;
 use App\Submission;
 use App\Target;
-use Tests\TestCase;
-
 
 it('can create a submission', function () {
     $response = $this->post(route('api.submissions.store'), [

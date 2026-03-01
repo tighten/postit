@@ -5,8 +5,6 @@ use App\Source;
 use App\Submission;
 use App\Target;
 use Illuminate\Support\Facades\Artisan;
-use Tests\TestCase;
-
 
 it('can seed the database', function () {
     Artisan::call('db:seed');
