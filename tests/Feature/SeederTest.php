@@ -1,25 +1,16 @@
 <?php
 
-namespace Tests\Feature;
-
 use App\Post;
 use App\Source;
 use App\Submission;
 use App\Target;
 use Illuminate\Support\Facades\Artisan;
-use PHPUnit\Framework\Attributes\Test;
-use Tests\TestCase;
 
-class SeederTest extends TestCase
-{
-    #[Test]
-    public function it_can_seed_the_database(): void
-    {
-        Artisan::call('db:seed');
+it('can seed the database', function () {
+    Artisan::call('db:seed');
 
-        $this->assertGreaterThan(0, Post::count());
-        $this->assertGreaterThan(0, Source::count());
-        $this->assertGreaterThan(0, Submission::count());
-        $this->assertGreaterThan(0, Target::count());
-    }
-}
+    expect(Post::count())->toBeGreaterThan(0)
+        ->and(Source::count())->toBeGreaterThan(0)
+        ->and(Submission::count())->toBeGreaterThan(0)
+        ->and(Target::count())->toBeGreaterThan(0);
+});
