@@ -9,10 +9,10 @@
     "type": "project",
     "require": {
         "php": "^8.2",
-        "laravel/framework": "^12.52",
+        "laravel/framework": "^12.53",
         "laravel/tinker": "^2.10.1",
         "laravel/ui": "^4.6",
-        "spatie/laravel-ignition": "^2.9",
+        "spatie/laravel-ignition": "^2.11",
         "tightenco/duster": "^3.3",
         "willvincent/feeds": "^2.7"
     },
