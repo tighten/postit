@@ -15,15 +15,15 @@ it('can create a submission', function () {
     expect(Submission::get())->toHaveCount(1);
     $submission = Submission::first();
 
-    expect($submission->target_id)->toEqual($targetId);
-    expect($submission->post_id)->toEqual($sourceId);
+    expect($submission->target_id)->toEqual($targetId)
+        ->and($submission->post_id)->toEqual($sourceId);
 });
 
 it('can delete a submission', function () {
     $submission = Submission::factory()->create();
-    expect(Submission::get())->toHaveCount(1);
-    expect(Post::get())->toHaveCount(1);
-    expect(Target::get())->toHaveCount(1);
+    expect(Submission::get())->toHaveCount(1)
+        ->and(Post::get())->toHaveCount(1)
+        ->and(Target::get())->toHaveCount(1);
 
     $response = $this->delete(route('api.submissions.destroy', [
         'target_id' => $submission->target_id,
@@ -32,7 +32,7 @@ it('can delete a submission', function () {
 
     $response->assertOk();
 
-    expect(Submission::get())->toHaveCount(0);
-    expect(Post::get())->toHaveCount(1);
-    expect(Target::get())->toHaveCount(1);
+    expect(Submission::get())->toHaveCount(0)
+        ->and(Post::get())->toHaveCount(1)
+        ->and(Target::get())->toHaveCount(1);
 });
