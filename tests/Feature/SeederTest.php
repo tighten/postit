@@ -12,8 +12,8 @@ uses(Tests\TestCase::class);
 it('can seed the database', function () {
     Artisan::call('db:seed');
 
-    $this->assertGreaterThan(0, Post::count());
-    $this->assertGreaterThan(0, Source::count());
-    $this->assertGreaterThan(0, Submission::count());
-    $this->assertGreaterThan(0, Target::count());
+    expect(Post::count())->toBeGreaterThan(0);
+    expect(Source::count())->toBeGreaterThan(0);
+    expect(Submission::count())->toBeGreaterThan(0);
+    expect(Target::count())->toBeGreaterThan(0);
 });
