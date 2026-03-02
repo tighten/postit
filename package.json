@@ -8,14 +8,8 @@
     "devDependencies": {
         "axios": "^1.11.0",
         "lodash": "^4.17.21",
-<<<<<<< HEAD
-        "postcss": "^8.4.4",
-        "sass": "^1.38.1",
         "tailwindcss": "^3.0.0",
-=======
         "postcss": "^8.4.47",
-        "tailwindcss": "0.5.2",
->>>>>>> 2c2114f (Upgrade Vite and PostCSS)
         "vue": "^2.7.0",
         "concurrently": "^9.0.1",
         "vite": "^5.4.21",

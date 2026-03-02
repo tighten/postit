@@ -10,7 +10,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    @vite('resources/sass/main.scss')
+    @vite('resources/css/main.css')
 </head>
 <body class="bg-brand-lightest font-sans font-normal">
     <div class="flex flex-col">
