@@ -4,11 +4,11 @@
             <a
                 :href="post.guid"
                 :title="this.post.title"
-                class="no-underline hover:underline font-normal text-gray-700"
+                class="no-underline hover:underline font-normal text-gray-600"
             >
                 {{ post.title }}
             </a>
-            <p class="text-xs text-gray-600 uppercase">
+            <p class="text-xs text-gray-500 uppercase">
                 {{ published }}
             </p>
         </td>

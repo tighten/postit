@@ -7,9 +7,9 @@
     "devDependencies": {
         "axios": "^1.11.0",
         "lodash": "^4.17.21",
-        "postcss": "^8.2.8",
+        "postcss": "^8.3.11",
         "sass": "^1.38.1",
-        "tailwindcss": "^1.9.6",
+        "tailwindcss": "^2.2.16",
         "vue": "^2.7.0",
         "concurrently": "^9.0.1",
         "vite": "^3.0.2",

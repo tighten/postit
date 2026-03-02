@@ -1,15 +1,15 @@
 footer {
-  @apply .border-t;
-  @apply .border-gray-400;
-  @apply .flex;
-  @apply .justify-center;
-  @apply .mt-8;
-  @apply .mx-auto;
-  @apply .pt-6;
-  @apply .w-3/4;
+  @apply border-t;
+  @apply border-gray-300;
+  @apply flex;
+  @apply justify-center;
+  @apply mt-8;
+  @apply mx-auto;
+  @apply pt-6;
+  @apply w-3/4;
 
   p {
-    @apply .text-gray-500;
+    @apply text-gray-400;
   }
 
   a {

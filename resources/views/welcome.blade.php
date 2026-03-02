@@ -28,7 +28,7 @@
         <div class="min-h-screen flex items-center justify-center">
             <div class="flex flex-col justify-around h-full">
                 <div>
-                    <h1 class="text-gray-600 text-center font-hairline tracking-wide text-7xl mb-6 leading-none">
+                    <h1 class="text-gray-500 text-center font-thin tracking-wide text-7xl mb-6 leading-none">
                         {{ config('app.name', 'Laravel') }}
                     </h1>
                     <ul>
