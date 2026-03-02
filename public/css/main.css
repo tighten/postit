@@ -2561,19 +2561,19 @@ footer a {
   flex: none;
 }
 
-.flex-grow {
+.grow {
   flex-grow: 1;
 }
 
-.flex-shrink {
+.shrink {
   flex-shrink: 1;
 }
 
-.flex-grow-0 {
+.grow-0 {
   flex-grow: 0;
 }
 
-.flex-shrink-0 {
+.shrink-0 {
   flex-shrink: 0;
 }
 

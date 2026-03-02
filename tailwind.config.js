@@ -1,10 +1,11 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+  content: ['./public/**/*.js', './resources/**/*.{js,vue,blade.php}'],
   theme: {
     extend: {
       colors: {
-        gray: colors.blueGray,
+        gray: colors.slate,
         orange: colors.orange,
         yellow: colors.yellow,
         green: colors.green,
