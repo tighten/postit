@@ -9,7 +9,7 @@
         "lodash": "^4.17.21",
         "postcss": "^8.2.8",
         "sass": "^1.38.1",
-        "tailwindcss": "0.5.2",
+        "tailwindcss": "^1.9.6",
         "vue": "^2.7.0",
         "concurrently": "^9.0.1",
         "vite": "^3.0.2",
