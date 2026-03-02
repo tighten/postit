@@ -2461,7 +2461,7 @@ footer a {
   flex-wrap: wrap-reverse;
 }
 
-.flex-no-wrap {
+.flex-nowrap {
   flex-wrap: nowrap;
 }
 
@@ -2589,7 +2589,7 @@ footer a {
   float: none;
 }
 
-.clearfix:after {
+.flow-root:after {
   content: "";
   display: table;
   clear: both;
@@ -2607,11 +2607,11 @@ footer a {
   font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
-.font-hairline {
+.font-thin {
   font-weight: 100;
 }
 
-.font-thin {
+.font-extralight {
   font-weight: 200;
 }
 
@@ -4597,7 +4597,7 @@ footer a {
   white-space: normal;
 }
 
-.whitespace-no-wrap {
+.whitespace-nowrap {
   white-space: nowrap;
 }
 
