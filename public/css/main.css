@@ -2569,11 +2569,11 @@ footer a {
   flex-shrink: 1;
 }
 
-.flex-no-grow {
+.flex-grow-0 {
   flex-grow: 0;
 }
 
-.flex-no-shrink {
+.flex-shrink-0 {
   flex-shrink: 0;
 }
 
@@ -3669,43 +3669,43 @@ footer a {
   position: sticky;
 }
 
-.pin-none {
+.inset-auto {
   top: auto;
   right: auto;
   bottom: auto;
   left: auto;
 }
 
-.pin {
+.inset-0 {
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
 
-.pin-y {
+.inset-y-0 {
   top: 0;
   bottom: 0;
 }
 
-.pin-x {
+.inset-x-0 {
   right: 0;
   left: 0;
 }
 
-.pin-t {
+.top-0 {
   top: 0;
 }
 
-.pin-r {
+.right-0 {
   right: 0;
 }
 
-.pin-b {
+.bottom-0 {
   bottom: 0;
 }
 
-.pin-l {
+.left-0 {
   left: 0;
 }
 
@@ -4449,7 +4449,7 @@ footer a {
   font-style: italic;
 }
 
-.roman {
+.not-italic {
   font-style: normal;
 }
 
