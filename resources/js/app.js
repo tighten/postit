@@ -5,7 +5,7 @@
  */
 
 import "./bootstrap";
-import "../sass/main.scss";
+import "../css/main.css";
 
 import Vue from "vue";
 window.Vue = Vue;

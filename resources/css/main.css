@@ -1,0 +1,51 @@
+@tailwind preflight;
+
+@tailwind components;
+
+:root {
+    --bg-primary: #f3eee8;
+    --color-yellow: #ffaa30;
+}
+
+html {
+    @apply h-full;
+}
+
+body {
+    @apply h-full;
+
+    background: var(--bg-primary);
+    font-size: 1.1em;
+}
+
+header {
+    @apply .text-white;
+
+    background: url('../img/header-pattern.svg') repeat-x;
+    text-shadow: 3px 4px rgba(0,0,0,0.30);
+    background-color: #eaad63;
+}
+
+th {
+    @apply .font-bold .pr-4 .pt-4 .text-right;
+}
+
+th a {
+    color: var(--color-yellow);
+    text-decoration: none;
+}
+
+footer {
+    @apply .border-t .border-grey .flex .justify-center .mt-8 .mx-auto .pt-6 .w-3/4;
+}
+
+footer p {
+    @apply .text-grey-dark;
+}
+
+footer a {
+    color: var(--color-yellow);
+    text-decoration: none;
+}
+
+@tailwind utilities;
