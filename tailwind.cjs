@@ -436,7 +436,7 @@ module.exports = {
   |-----------------------------------------------------------------------------
   |
   | Here is where you define your border radius values. If a `default` radius
-  | is provided, it will be made available as the non-suffixed `.rounded`
+  | is provided, it will be made available as the non-suffixed `.rounded-sm`
   | utility.
   |
   | If your scale includes a `0` value to reset already rounded corners, it's
@@ -715,7 +715,7 @@ module.exports = {
   | per utility using comma separation.
   |
   | If a `default` shadow is provided, it will be made available as the non-
-  | suffixed `.shadow` utility.
+  | suffixed `.shadow-sm` utility.
   |
   | Class name: .shadow-{size?}
   |

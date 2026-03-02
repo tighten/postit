@@ -53231,7 +53231,7 @@ function genDefaultModel(el, value, modifiers) {
     addProp(el, 'value', "(".concat(value, ")"));
     addHandler(el, event, code, null, true);
     if (trim || number) {
-        addHandler(el, 'blur', '$forceUpdate()');
+        addHandler(el, 'blur-sm', '$forceUpdate()');
     }
 }
 
