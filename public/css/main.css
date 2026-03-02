@@ -3045,35 +3045,35 @@ footer a {
   max-width: 20rem;
 }
 
-.max-w-sm {
+.max-w-lg {
   max-width: 30rem;
 }
 
-.max-w-md {
+.max-w-2xl {
   max-width: 40rem;
 }
 
-.max-w-lg {
+.max-w-3xl {
   max-width: 50rem;
 }
 
-.max-w-xl {
+.max-w-4xl {
   max-width: 60rem;
 }
 
-.max-w-2xl {
+.max-w-5xl {
   max-width: 70rem;
 }
 
-.max-w-3xl {
+.max-w-6xl {
   max-width: 80rem;
 }
 
-.max-w-4xl {
+.max-w-screen-xl {
   max-width: 90rem;
 }
 
-.max-w-5xl {
+.max-w-screen-xl {
   max-width: 100rem;
 }
 
