@@ -1,9 +1,9 @@
 <?php
 
-use App\Post;
-use App\Source;
-use App\Submission;
-use App\Target;
+use App\Models\Post;
+use App\Models\Source;
+use App\Models\Submission;
+use App\Models\Target;
 use Illuminate\Support\Facades\Artisan;
 
 it('can seed the database', function () {

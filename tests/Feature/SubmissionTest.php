@@ -1,8 +1,8 @@
 <?php
 
-use App\Post;
-use App\Submission;
-use App\Target;
+use App\Models\Post;
+use App\Models\Submission;
+use App\Models\Target;
 
 it('can create a submission', function () {
     $response = $this->post(route('api.submissions.store'), [
