@@ -15,7 +15,7 @@
 <body class="bg-brand-lightest font-sans font-normal">
     <div class="flex flex-col">
         @if (Route::has('login'))
-            <div class="absolute pin-t pin-r mt-4 mr-4">
+            <div class="absolute top-0 right-0 mt-4 mr-4">
                 @auth
                     <a href="{{ url('/home') }}" class="no-underline hover:underline text-sm font-normal text-brand-dark uppercase">Home</a>
                 @else
@@ -28,10 +28,10 @@
         <div class="min-h-screen flex items-center justify-center">
             <div class="flex flex-col justify-around h-full">
                 <div>
-                    <h1 class="text-grey-darker text-center font-hairline tracking-wide text-7xl mb-6">
+                    <h1 class="text-gray-600 text-center font-hairline tracking-wide text-7xl mb-6 leading-none">
                         {{ config('app.name', 'Laravel') }}
                     </h1>
-                    <ul class="list-reset">
+                    <ul>
                         <li class="inline pr-8">
                             <a href="https://laravel.com/docs" class="no-underline hover:underline text-sm font-normal text-brand-dark uppercase" title="Documentation">Documentation</a>
                         </li>

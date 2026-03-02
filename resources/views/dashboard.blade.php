@@ -13,9 +13,9 @@
     @vite('resources/js/app.js')
 </head>
 <body class="font-normal font-sans">
-    <div id="app" class="flex flex-col max-w-2xl mx-auto pb-8 bg-white shadow-md">
+    <div id="app" class="flex flex-col max-w-5xl mx-auto pb-8 bg-white shadow-md">
         <header class="flex py-8 justify-center">
-            <h1 class="text-4xl tracking-wide">{{ config('app.name', 'PostIt') }}</h1>
+            <h1 class="text-4xl tracking-wide font-bold leading-none">{{ config('app.name', 'PostIt') }}</h1>
         </header>
 
         <section class="flex justify-center mt-8">
