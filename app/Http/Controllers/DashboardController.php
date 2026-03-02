@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Source;
-use App\Target;
+use App\Models\Source;
+use App\Models\Target;
 use Illuminate\View\View;
 
 class DashboardController extends Controller

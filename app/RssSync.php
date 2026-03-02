@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Models\Post;
+use App\Models\Source;
 use Carbon\Carbon;
 
 class RssSync
