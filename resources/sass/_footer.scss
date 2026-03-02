@@ -1,6 +1,6 @@
 footer {
   @apply .border-t;
-  @apply .border-gray-400;
+  @apply .border-gray-300;
   @apply .flex;
   @apply .justify-center;
   @apply .mt-8;
@@ -9,7 +9,7 @@ footer {
   @apply .w-3/4;
 
   p {
-    @apply .text-gray-500;
+    @apply .text-gray-400;
   }
 
   a {

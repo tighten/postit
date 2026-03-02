@@ -3911,13 +3911,13 @@ var render = function render() {
   return _c("tr", [_c("td", {
     staticClass: "text-right pb-4 pr-4"
   }, [_c("a", {
-    staticClass: "no-underline hover:underline font-normal text-gray-700",
+    staticClass: "no-underline hover:underline font-normal text-gray-600",
     attrs: {
       href: _vm.post.guid,
       title: this.post.title
     }
   }, [_vm._v("\n            " + _vm._s(_vm.post.title) + "\n        ")]), _vm._v(" "), _c("p", {
-    staticClass: "text-xs text-gray-600 uppercase"
+    staticClass: "text-xs text-gray-500 uppercase"
   }, [_vm._v("\n            " + _vm._s(_vm.published) + "\n        ")])]), _vm._v(" "), _vm._l(_vm.targets, function (target) {
     return _c("td", {
       key: target.id,
