@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Models\Post;
+use App\Models\Source;
 use Carbon\Carbon;
 
 class RssSync
@@ -38,6 +40,6 @@ class RssSync
 
     private function contentToAbstract($content)
     {
-        return mb_substr($content, 0, 225).'...';
+        return mb_substr($content, 0, 225) . '...';
     }
 }
