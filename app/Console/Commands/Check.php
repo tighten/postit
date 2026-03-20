@@ -4,24 +4,14 @@ namespace App\Console\Commands;
 
 use App\Models\Source;
 use App\RssSync;
+use Illuminate\Console\Attributes\Description;
+use Illuminate\Console\Attributes\Signature;
 use Illuminate\Console\Command;
 
+#[Signature('check')]
+#[Description('Check sources')]
 class Check extends Command
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
-    protected $signature = 'check';
-
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
-    protected $description = 'Check sources';
-
     /**
      * Create a new command instance.
      *
