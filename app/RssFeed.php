@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Feeds;
+use SimplePie\SimplePie;
 
 class RssFeed
 {
@@ -25,7 +25,11 @@ class RssFeed
 
     public static function fromUrl($url)
     {
-        $feed = Feeds::make($url);
+        $feed = new SimplePie;
+        $feed->set_feed_url($url);
+        $feed->set_cache_location(storage_path('framework/cache'));
+        $feed->set_cache_duration(3600);
+        $feed->init();
 
         return new static(
             $feed->get_title(),
