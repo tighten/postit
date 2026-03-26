@@ -12,9 +12,9 @@
         "laravel/framework": "^13.2",
         "laravel/tinker": "^3.0",
         "laravel/ui": "^4.6",
-        "spatie/laravel-ignition": "^2.11",
-        "simplepie/simplepie": "^1.5",
-        "tightenco/duster": "^3.3"
+        "spatie/laravel-ignition": "^2.12",
+        "simplepie/simplepie": "^1.9",
+        "tightenco/duster": "^3.4"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
