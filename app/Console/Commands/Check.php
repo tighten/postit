@@ -12,19 +12,6 @@ use Illuminate\Console\Command;
 #[Description('Check sources')]
 class Check extends Command
 {
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
-    /**
-     * Execute the console command.
-     */
     public function handle(): void
     {
         Source::all()->each(function ($source) {
