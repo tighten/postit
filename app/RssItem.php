@@ -44,7 +44,7 @@ class RssItem
             $feedItem->get_date('c'),
             $feedItem->get_id(),
             $feedItem->get_content(),
-            $feedItem->get_enclosure()->get_link(),
+            $feedItem->get_enclosure()?->get_link(),
             $feedItem->get_author()
         );
     }
