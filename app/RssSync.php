@@ -8,13 +8,33 @@ use Carbon\Carbon;
 
 class RssSync
 {
+    private const PODCAST_URL_PATTERNS = [
+        'pragmatic-ai-ep',
+        'bol-ep',
+    ];
+
     public function sync(Source $source)
     {
         $feed = RssFeed::fromUrl($source->feed_url);
 
         foreach ($feed->items as $item) {
+            if ($this->isPodcastEpisode($item)) {
+                continue;
+            }
+
             $this->importItem($item, $source);
         }
+    }
+
+    private function isPodcastEpisode(RssItem $item): bool
+    {
+        foreach (self::PODCAST_URL_PATTERNS as $pattern) {
+            if (str_contains($item->guid, $pattern)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private function importItem($item, $source)
