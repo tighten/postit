@@ -9,10 +9,10 @@
         "@tailwindcss/postcss": "^4.2.1",
         "alpinejs": "^3.14.0",
         "concurrently": "^9.0.1",
-        "laravel-vite-plugin": "^2.0.0",
+        "laravel-vite-plugin": "^3.1.0",
         "postcss": "^8.4.47",
         "tailwindcss": "^4.2.1",
-        "vite": "^7.0.7"
+        "vite": "^8.0.16"
     },
     "$schema": "https://www.schemastore.org/package.json"
 }
