@@ -4,7 +4,7 @@ namespace App;
 
 use App\Models\Post;
 use App\Models\Source;
-use Carbon\Carbon;
+use Illuminate\Support\Carbon;
 
 class RssSync
 {

@@ -14,6 +14,6 @@ class Source extends Model
 
     public function posts(): HasMany
     {
-        return $this->hasMany(Post::class)->orderBy('published_at', 'desc');
+        return $this->hasMany(Post::class)->orderByDesc('published_at');
     }
 }
