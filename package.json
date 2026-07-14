@@ -8,7 +8,7 @@
     "devDependencies": {
         "@tailwindcss/postcss": "^4.2.1",
         "alpinejs": "^3.14.0",
-        "concurrently": "^9.0.1",
+        "concurrently": "^9.2.4",
         "laravel-vite-plugin": "^3.1.0",
         "postcss": "^8.4.47",
         "tailwindcss": "^4.2.1",
