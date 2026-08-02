@@ -10,7 +10,7 @@
         "alpinejs": "^3.14.0",
         "concurrently": "^9.0.1",
         "laravel-vite-plugin": "^3.1.0",
-        "postcss": "^8.4.47",
+        "postcss": "^8.5.25",
         "tailwindcss": "^4.2.1",
         "vite": "^8.0.16"
     },
