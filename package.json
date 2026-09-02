@@ -14,5 +14,8 @@
         "tailwindcss": "^4.2.1",
         "vite": "^8.0.16"
     },
+    "optionalDependencies": {
+        "@laravel/multiplex": "^0.4.1"
+    },
     "$schema": "https://www.schemastore.org/package.json"
 }
